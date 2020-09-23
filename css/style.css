@@ -1,0 +1,244 @@
+/* Good Luck! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    border: 2px solid blue;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, blue, darkblue);
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: pink;
+    animation: col 2000ms ease infinite;
+}
+
+.content h2:before {
+    content: 'BEFORE';
+    background-color: lightgrey;
+    border: lightgrey;
+    color: lightgrey;
+    transform-origin: 0px;
+    position: absolute;
+    animation: names 1500ms ease forwards;
+}
+
+@keyframes names {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes col {
+    0% {
+        color: pink;
+    }
+    12.5% {
+        color: purple;
+    }
+    25% {
+        color: blue;
+    }
+    37.5% {
+        color: lightblue;
+    }
+    50% {
+        color: green;
+    }
+    62.5% {
+        color: yellow;
+    }
+    75% {
+        color: orange;
+    }
+    87.5% {
+        color: red;
+    }
+    100% {
+        color: pink;
+    }
+}
+
+.img img {
+    border: 2px solid black;
+    width: 55%;
+    float: left;
+    margin-right: 5px;
+    transform: rotateY(270deg);
+    transform-origin: 0;
+    animation: img 1500ms ease forwards;
+}
+
+@keyframes img {
+    from {
+        transform: rotateY(270deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.browsers {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-template-areas: 
+    "chrome mozilla saf"
+    "op explorer me";
+    margin-left: 200px;
+    margin-right: 200px;
+    gap: 10px;
+}
+
+.google_chrome {
+    grid-area: chrome;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.mozilla_firefox {
+    grid-area: mozilla;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.safari {
+    grid-area: saf;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.opera {
+    grid-area: op;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.internet_explorer {
+    grid-area: explorer;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.microsoft_edge {
+    grid-area: me;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.control_1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 92px;
+}
+
+.control_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.control_3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.control_4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 22px;
+}
+
+.control_5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom: 22px;
+}
+
+.control_6 {
+    display: flex;
+    justify-content: center;
+    margin-top: 46px;
+    margin-bottom: 22px;
+}
+
+.btn {
+    margin: auto;
+    background-color: blue;
+    padding: 7px 18px;
+    color: white;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    box-shadow: 0 0 4px blue;
+    text-shadow: 0 0 1px white;
+}
+
+footer {
+    border: 2px solid blue;
+    text-align: center;
+    background-image: linear-gradient(to bottom, blue, darkblue);
+    margin-top: 10px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
+    margin-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .browsers {
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        grid-template-areas: 
+        "chrome mozilla"
+        "saf op"
+        "explorer me";
+    }
+}
+
+@media (max-width: 900px) {
+    .browsers {
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+        grid-template-areas: 
+        "chrome"
+        "mozilla"
+        "saf"
+        "op"
+        "explorer"
+        "me";
+    }
+}
